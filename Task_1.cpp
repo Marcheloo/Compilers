@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <vector>
 #include <string>
 
@@ -29,12 +29,16 @@ int main() {
     int n;
     std::cout << "Введите количество цепочек языка L1: ";
     std::cin >> n;
+    while (n > 10000) {
+        std::cout << "Ошибка: недопустимое количество цепочек для L1/L2\n";
+        std::cin >> n;
+    }
     std::cout << "Введите цепочки языка L1:\n";
     for (int i = 0; i < n; i++) {
         std::string s;
         std::cin >> s;
         while (s.length() > 100) {
-            std::cout << "Ошибка, длина цепочки превышает 100 символов\n";
+            std::cout << "Ошибка: длина цепочки превышает 100 символов\n";
             std::cin >> s;
         }
         language1.push_back(s);
@@ -43,12 +47,16 @@ int main() {
     // Вводим цепочки языка L2
     std::cout << "Введите количество цепочек языка L2: ";
     std::cin >> n;
+    while (n > 10000) {
+        std::cout << "Ошибка: недопустимое количество цепочек для L1/L2\n";
+        std::cin >> n;
+    }
     std::cout << "Введите цепочки языка L2:\n";
     for (int i = 0; i < n; i++) {
         std::string s;
         std::cin >> s;
         while (s.length() > 100) {
-            std::cout << "Ошибка, длина цепочки превышает 100 символов\n";
+            std::cout << "Ошибка: длина цепочки превышает 100 символов\n";
             std::cin >> s;
         }
         language2.push_back(s);
